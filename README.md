@@ -2,6 +2,17 @@
 
 `.bashrc` や `.vimrc` や `.vim/` などを GitHubで管理している
 
+## コピペ用
+
+```
+mkdir -p ~/git
+cd ~/git/
+git clone https://github.com/teityura/dotfiles.git
+cd dotfiles/
+./backup-default-dotfiles.sh
+./copy-dotfiles.sh
+```
+
 ## backup-default-dotfiles.sh
 
 デフォルトのdotfilesを `.default-dotfiles` にバックアップする  
