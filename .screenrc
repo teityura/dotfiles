@@ -36,4 +36,4 @@ hardstatus alwayslastline "%{= ck}[%m/%d %02c:%s] %{ck} %-w%{=u CK}%n %t%{-} %+w
 hardstatus off
 
 # Default Shell
-shell $SHELL
+defshell -bash
