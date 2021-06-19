@@ -49,7 +49,7 @@ function _dockerRemoveResources() {
     elif [ "$1" = "con" ]; then
         _dockerRemoveContainers
     elif [ "$1" = "img" ]; then
-        _dockerRemoveContainers
+        _dockerRemoveImages
     elif [ "$1" = "vol" ]; then
         _dockerRemoveVolumes
     elif [ "$1" = "net" ]; then
