@@ -74,28 +74,27 @@ function _dockerRemovePrune() {
 
 function _dockerRemoveContainers() {
     echo -e "\n[Containers]"
-    result=`docker container ps -aq`
-    test -n "$result" && docker rm -f $result
+    remove_targets=`docker container ps -aq`
+    test -n "$remove_targets" && docker rm -f $remove_targets
     docker container ls
 }
 function _dockerRemoveImages() {
     echo -e "\n[Images]"
-    result=`docker image ls -q`
-    test -n "$result" && docker image rm -f $result
+    remove_targets=`docker image ls -q`
+    test -n "$remove_targets" && docker image rm -f $remove_targets
     docker image ls
 }
 function _dockerRemoveVolumes() {
     echo -e "\n[Volumes]"
-    result=`docker volume ls -q`
-    test -n "$result" && docker volume rm -f $result
+    remove_targets=`docker volume ls -q`
+    test -n "$remove_targets" && docker volume rm -f $remove_targets
     docker volume ls
 }
 function _dockerRemoveNetworks() {
     echo -e "\n[Networks]"
-    result=`docker network ls -q`
     docker_network_list=`docker network ls | awk 'NR>1 {print $2}'`
-    remove_target=`echo -e "${docker_network_list}" | grep -v -e '^bridge$' -e '^host$' -e '^none$'`
-    test -n "$remove_target" && docker network rm $remove_target
+    remove_targets=`echo -e "${docker_network_list}" | grep -v -e '^bridge$' -e '^host$' -e '^none$'`
+    test -n "$remove_targets" && docker network rm $remove_targets
     docker network ls
 }
 function _dockerRemoveAllForce() {
