@@ -8,11 +8,11 @@ export TERM=xterm
 # Add alias
 #===============================================================================
 alias .='pwd'
-alias ..='cd ../'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .....='cd ../../../../'
-alias ......='cd ../../../../../'
+alias ..='cd ../ ; pwd'
+alias ...='cd ../../ ; pwd'
+alias ....='cd ../../../ ; pwd'
+alias .....='cd ../../../../ ; pwd'
+alias ......='cd ../../../../../ ; pwd'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
