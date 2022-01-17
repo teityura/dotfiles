@@ -1,0 +1,18 @@
+[include]
+    path = .gitconfig.local
+
+[alias]
+    cc = !git checkout . && git clean -f
+    diffn = diff --name-only
+    gr = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an %C(white)%s %C(auto)%d%Creset\"
+    gra = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an %C(white)%s %C(auto)%d%Creset\" --all
+    one = log --oneline --pretty=format:'%C(yellow)%h %C(cyan)[%cd] %C(green)<%an> %C(white)%s %C(auto)%d' --date=format:'%Y/%m/%d %H:%M:%S'
+    s = status
+    st = status
+    sta = status
+    ch = checkout
+    che = checkout
+    co = checkout
+    br = branch
+    bra = branch
+

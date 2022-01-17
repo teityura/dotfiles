@@ -1,6 +1,6 @@
 #!/bin/sh
 
-copy_files=`find . -maxdepth 1 -name '.*' -exec basename {} \; | egrep -v -e '^\.$' -e '^\.git'`
+copy_files=`find . -maxdepth 1 -name '.*' -exec basename {} \; | sort | egrep -v -e '^\.$' -e '^\.git$'`
 
 echo 'Copy Targets =========='
 echo "Dir: `ls -d ./`"
