@@ -11,6 +11,8 @@ git clone https://github.com/teityura/dotfiles.git
 cd dotfiles/
 ./backup-default-dotfiles.sh
 ./copy-dotfiles.sh
+exec $SHELL
+
 ```
 
 ## backup-default-dotfiles.sh
@@ -41,7 +43,7 @@ drwxr-xr-x@  4 teityura  staff   128  5  8 20:04 .vim
 
 ## copy-dotfiles.sh
 
-リポジトリで管理しているdotfilesを `${HOME}/` にバックアップする
+リポジトリで管理しているdotfilesを `${HOME}/` に配置(上書き)する
 
 ```
 ./copy-dotfiles.sh

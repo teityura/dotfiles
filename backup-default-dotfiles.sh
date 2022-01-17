@@ -7,6 +7,7 @@ BACKUP_FILES="
 .config
 .gitconfig
 .gitconfig.local
+.gitignore_global
 .inputrc
 .screenrc
 .sqliterc
