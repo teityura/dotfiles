@@ -5,8 +5,8 @@
 ## コピペ用
 
 ```
-mkdir -p ~/git
-cd ~/git/
+mkdir -p ~/repos
+cd ~/repos/
 git clone https://github.com/teityura/dotfiles.git
 cd dotfiles/
 ./backup-default-dotfiles.sh
