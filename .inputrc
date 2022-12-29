@@ -1,4 +1,7 @@
-# MyConfig
+# Disable bell sound
+set bell-style none
+
+# Set input completion
 "\C-n": history-search-forward
 "\C-p": history-search-backward
 "\e[1;5A": history-search-forward
