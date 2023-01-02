@@ -6,7 +6,13 @@ set enc=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
 
-" タブ、行末スペースなどを可視化した時に表示する記号
+" 起動, 挿入, 通常, 終了 でカーソルを切り替える
+let &t_ti .= "\e[1 q"
+let &t_SI .= "\e[5 q"
+let &t_EI .= "\e[1 q"
+let &t_te .= "\e[0 q"
+
+" タブ, 行末スペースなどを可視化する
 set listchars=eol:↲,tab:>\-,trail:-,extends:>,precedes:<,nbsp:%
 set list
 
