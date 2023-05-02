@@ -1,5 +1,5 @@
 [include]
-    path = .gitconfig.local
+    path = ~/.gitconfig.local
 
 [alias]
     cc = !git checkout . && git clean -f
@@ -16,3 +16,6 @@
     br = branch
     bra = branch
 
+[core]
+    pager = LESSCHARSET=utf-8 less
+    excludesfile = ~/.gitignore_global
