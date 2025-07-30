@@ -17,12 +17,18 @@ fi
 #===============================================================================
 # Add alias
 #===============================================================================
-alias ,='pwd'
-alias ,,='cd ../ ; pwd'
-alias ,,,='cd ../../ ; pwd'
-alias ,,,,='cd ../../../ ; pwd'
-alias ,,,,,='cd ../../../../ ; pwd'
-alias ,,,,,,='cd ../../../../../ ; pwd'
+.() {
+  if [ $# -eq 0 ]; then
+    pwd
+  else
+    source "$@"
+  fi
+}
+alias ..='cd ../ ; pwd'
+alias ...='cd ../../ ; pwd'
+alias ....='cd ../../../ ; pwd'
+alias .....='cd ../../../../ ; pwd'
+alias ......='cd ../../../../../ ; pwd'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
